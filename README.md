@@ -227,6 +227,10 @@ ggplot(activityData, aes(x=weekday1, y=count_of)) +
 ```
 ![Time Asleep vs  Time in Bed Visualization](https://github.com/ggiovanii8/Case-Study-Bellabeat-Product-Analysis/assets/111608192/feb94b12-0364-4126-b21a-73315975508d)
 
+By analyzing the scatter plot, we can gain insights into sleep patterns. The distribution and clustering of data points provide information about sleep efficiency, including the balance between time spent in bed and actual sleep time. The plot can also highlight variations in sleep duration and identify any noteworthy trends or outliers.
+
+Overall, the "Time Asleep vs. Time in Bed" scatter plot provides a visual representation of the relationship between total time in bed and actual sleep time, helping us understand sleep patterns and identify potential areas for improving sleep quality. The amount of time the participants stayed in bed before falling asleep is approximately 40 minutes. 
+
 ## Calories Burned for Steps Taken
 
 ```
