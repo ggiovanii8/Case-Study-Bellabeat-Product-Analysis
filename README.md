@@ -1,4 +1,7 @@
 # Case Study Bellabeat Product Analysis
+Author: Giovani Gutierrez 
+
+Date: 05/23/2023
 ## Company Information
 
 Bellabeat, a tech-driven wellness company for women, has experienced remarkable growth since its establishment in 2013. With a range of five key products including the Bellabeat app, leaf, time, spring, and Bellabeat membership, the company has established itself as a prominent player in the industry. While currently a successful small company, Bellabeat holds the potential to expand its influence and presence in the global smart device market.
@@ -6,7 +9,7 @@ Bellabeat, a tech-driven wellness company for women, has experienced remarkable 
 Our team has been entrusted with the task of analyzing smart device data to gain valuable insights into how consumers are utilizing their smart devices. By delving into this data, we aim to uncover patterns, behaviors, and preferences that will serve as a cornerstone for shaping the company's marketing strategy. Through our analysis, we seek to provide actionable recommendations that will help propel Bellabeat towards further success in the market.
 
 ## 1. Ask
-💡The objective of this case study is to gain insight into how consumers use non-Bellabeat smart
+The objective of this case study is to gain insight into how consumers use non-Bellabeat smart
 devices such as Leaf. The study aims to answer the following research questions:
 
 Primary Stakeholders: Urška Sršen and Sando Mur, executive team members.
@@ -34,7 +37,7 @@ Current: The data encompasses the period from March 2016 to May 2016. However, i
 
 Cited: The source of the dataset is Mobius via Kaggle. 
 
-⛔ The dataset has limitations:
+ The dataset has limitations:
 
   a)	The dataset consists of data from only 30 users. While the general rule of the central limit theorem (n≥30) allows for the use of t-tests, a larger sample size is preferred for more robust analysis.
 
@@ -253,6 +256,10 @@ ggplot(data=dailyActivity, aes(x=TotalSteps,y=Calories,color=Calories)) +
   ```
 ![Calories Burned for Steps Taken Visualization](https://github.com/ggiovanii8/Case-Study-Bellabeat-Product-Analysis/assets/111608192/a60162be-ad92-4041-be15-b17584e52c80)
 
+In this visualization, each bar corresponds to a specific range of steps taken, and the height of the bar represents the calories burned for that particular step range. By examining the heights of the bars, we can identify variations in energy expenditure across different step ranges.
+
+The "Calories Burned for Steps Taken" visualization provides insights into the relationship between physical activity, as measured by steps taken, and the resulting calories burned. It allows us to assess the effectiveness of steps taken in terms of calorie burn, providing valuable information for individuals interested in tracking their physical activity and managing their energy expenditure.
+
 ## Calories vs Activity Intensity Level
 
 #### Viewing dataset
@@ -303,6 +310,10 @@ par(oma = c(0, 0, 2, 0))
 title(main = "Calories vs Activity Intensity Level", outer = TRUE)
 ```
 ![Calories vs Activity Intensity Level](https://github.com/ggiovanii8/Case-Study-Bellabeat-Product-Analysis/assets/111608192/0a7b3598-20cf-4ed1-ab6c-ea3782be97af)
+
+In this visualization, each data point represents a specific activity, plotted according to its intensity level on the x-axis and the corresponding calories burned on the y-axis. By examining the distribution and position of the data points, we can gain insights into the relationship between activity intensity and calorie burn.
+
+The "Calories vs Activity Intensity Level" visualization allows us to assess the impact of different activity levels on energy expenditure. It highlights the variations in calorie burn across various activity intensities, providing valuable information for individuals interested in optimizing their physical activity choices and managing their energy balance.
 
 ## Total Steps by Day of the Week
 
@@ -368,6 +379,10 @@ ggplot(dailySteps, aes(x = DayOfWeek, y = StepTotal, fill = DayOfWeek)) +
 ```
 ![Total Steps by Day of the Week Visualization](https://github.com/ggiovanii8/Case-Study-Bellabeat-Product-Analysis/assets/111608192/1adc0510-6002-474a-a36c-c69334c5d5c3)
 
+In this visualization, a bar chart is used to display the data. Each bar corresponds to a day of the week, and its height represents the total number of steps recorded for that day. By comparing the heights of the bars, we can easily identify the days with higher or lower step counts.
+
+The "Total Steps by Day of the Week" visualization provides insights into the patterns of physical activity throughout the week. It allows us to identify which days exhibit higher levels of activity and which days may have lower activity levels. This information can be valuable for analyzing trends, identifying potential correlations with other factors, and making informed decisions related to physical fitness and well-being.
+
 ## Activity Minutes vs Calories Burned
 
 #### Reshaping the data for plotting.
@@ -393,3 +408,33 @@ ggplot(activityMelted, aes(x = Calories, y = ActiveMinutes, color = ActivityLeve
   facet_wrap(~ ActivityLevel, nrow = 2)
 ```
 ![Active Minutes vs  Calories Burned Visualization](https://github.com/ggiovanii8/Case-Study-Bellabeat-Product-Analysis/assets/111608192/cac4d569-2a04-44cc-8417-a72b5c9b61b8)
+
+The "Activity Minutes vs Calories Burned" visualization allows us to understand the relationship between the time spent on physical activity and the resulting calorie burn. It provides insights into the effectiveness of different activity durations in terms of calorie expenditure. By analyzing the scatter plot, we can identify clusters or patterns that indicate higher calorie burn for longer activity durations or vice versa.
+
+This visualization can be helpful in optimizing workout routines, setting fitness goals, and tracking progress towards calorie-burning objectives. It provides valuable information for individuals seeking to make informed decisions regarding their physical activity levels and overall fitness.
+
+## 6. Recommendations / Act
+
+## Bellabeat Mempership
+
+To further drive subscriptions and expand membership growth, Bellabeat can implement the following strategies:
+
+Free Trial User Experience: Introduce a free trial period for the premium service to encourage users to try out the additional features and benefits. This approach allows potential customers to experience the value of the premium service firsthand, increasing the likelihood of converting them into paying subscribers.
+
+Referral and Reward Program: Implement a referral program to incentivize existing members to invite their friends and acquaintances to join Bellabeat. By offering rewards or discounts to both the referrer and the new member, this program can create a positive word-of-mouth effect and generate a steady stream of new subscriptions.
+
+Discounted Smart Device Cost for Members: Provide exclusive pricing or discounts on Bellabeat smart devices for members. This strategy not only adds value to the membership but also acts as an incentive for non-members to join and enjoy the benefits of owning Bellabeat devices.
+
+Partnerships with Health & Fitness Companies: Forge strategic partnerships with established health and fitness companies to enhance Bellabeat's market presence and drive membership growth. Collaborating with reputable brands in the industry can provide opportunities for cross-promotion, joint marketing campaigns, and access to new customer segments.
+
+By implementing these recommendations, Bellabeat can enhance its marketing efforts, attract new subscribers, and foster a strong and engaged community of members.
+
+## Key Points
+
+#### The business task involves analyzing data about select users of FitBit smart devices to draw gainful insights into trends, patterns, and relationships between health parameters. This analysis will help identify potential opportunities for growth and provide high-level marketing recommendations and strategies to Bellabeat's marketing department.
+
+1. By analyzing the data from FitBit smart device users, we can uncover trends such as popular health and fitness activities, preferred features and functionalities, frequency and duration of device usage, sleep patterns, activity intensity levels, and engagement with wellness metrics.
+
+2. Understanding the trends in smart device usage can help identify the preferences and behaviors of Bellabeat's target customers. This knowledge can be used to align Bellabeat's product offerings, app features, and marketing messages with the needs and interests of their customers. For example, if the data reveals that sleep tracking and stress management are popular among smart device users, Bellabeat can focus on enhancing these features in their products to cater to customer demands.
+
+3. The identified trends can provide valuable insights for shaping Bellabeat's marketing strategy. By leveraging the data, Bellabeat can tailor their marketing campaigns to highlight the features and benefits that align with the prevailing trends. They can also identify potential partnerships or collaborations with health and fitness influencers or brands that complement the identified trends. Furthermore, understanding usage patterns can help optimize marketing channels and messages to effectively reach and engage with their target audience, leading to increased brand awareness, customer acquisition, and retention.
