@@ -186,18 +186,6 @@ activityData <- dailyActivity %>%
 glimpse(activityData)
 ```
 
-#### Analyzing data set, aggregating our data so its usefull and accessible, organizing and formatting data and identifing trends & relationships. Viewed the dataset sleepDay, and wanted to see how much time was spent in bed before falling asleep. 
- 
-```
-view(sleepDay)
-Avg_minutes_asleep <- sleepDay %>% summarize(avg_sleeptime = mean(TotalMinutesAsleep))
-Avg_minutes_asleep
-AverageTimeInBed <- sleepDay %>%
-summarize(AverageTimeInBed = mean(TotalTimeInBed))
-AverageTimeInBed
-```
-#### Subtracting 419 from 459 gives us the amount of time the participants stayed in bed before falling asleep, which is an additional 40 minutes.
-
 ## 5. Share / Visualizations
 
 #### Determining the best way to share my findings. Created effective data visualization. Presented findings and ensured our work was accessible. 
@@ -232,7 +220,20 @@ ggplot(activityData, aes(x=weekday1, y=count_of)) +
 
 By analyzing the scatter plot, we can gain insights into sleep patterns. The distribution and clustering of data points provide information about sleep efficiency, including the balance between time spent in bed and actual sleep time. The plot can also highlight variations in sleep duration and identify any noteworthy trends or outliers.
 
-Overall, the "Time Asleep vs. Time in Bed" scatter plot provides a visual representation of the relationship between total time in bed and actual sleep time, helping us understand sleep patterns and identify potential areas for improving sleep quality. The amount of time the participants stayed in bed before falling asleep is approximately 40 minutes. 
+Overall, the "Time Asleep vs. Time in Bed" scatter plot provides a visual representation of the relationship between total time in bed and actual sleep time, helping us understand sleep patterns and identify potential areas for improving sleep quality. The amount of time the participants stayed in bed before falling asleep is approximately 31 minutes.
+###### (work on how we got the 40 minutes below)
+
+#### Analyzing our data set. Aggregating our data so its usefull and accessible, organizing and formatting data and identifing trends & relationships. Viewed the dataset sleepDay, and wanted to see how much time was spent in bed before falling asleep. 
+ 
+```
+head(sleepDay)
+Avg_minutes_asleep <- sleepDay %>% summarize(avg_sleeptime = mean(TotalMinutesAsleep))
+Avg_minutes_asleep
+AverageTimeInBed <- sleepDay %>%
+summarize(AverageTimeInBed = mean(TotalTimeInBed))
+AverageTimeInBed
+```
+#### Subtracting 419(total minutes asleep) from 450(total minutes in bed) gives us the amount of time the participants stayed in bed before falling asleep, which is an additional 31 minutes.
 
 ## Calories Burned for Steps Taken
 
